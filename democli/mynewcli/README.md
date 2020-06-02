@@ -30,28 +30,24 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`mynewcli config [FILE]`](#mynewcli-config-file)
+* [`mynewcli child`](#mynewcli-child)
 * [`mynewcli goodbye`](#mynewcli-goodbye)
 * [`mynewcli hello [FILE]`](#mynewcli-hello-file)
 * [`mynewcli help [COMMAND]`](#mynewcli-help-command)
+* [`mynewcli multiquestions [FILE]`](#mynewcli-multiquestions-file)
 * [`mynewcli test [SECONDARG]`](#mynewcli-test-secondarg)
-* [`mynewcli testcommand [FILE]`](#mynewcli-testcommand-file)
 
-## `mynewcli config [FILE]`
-
-describe the command here
+## `mynewcli child`
 
 ```
 USAGE
-  $ mynewcli config [FILE]
+  $ mynewcli child
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  --stage=typescript|typescript|typescript
 ```
 
-_See code: [src/commands/config.ts](https://github.com/democli/mynewcli/blob/v0.0.0/src/commands/config.ts)_
+_See code: [src/commands/child.ts](https://github.com/democli/mynewcli/blob/v0.0.0/src/commands/child.ts)_
 
 ## `mynewcli goodbye`
 
@@ -99,6 +95,22 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.0.1/src/commands/help.ts)_
 
+## `mynewcli multiquestions [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ mynewcli multiquestions [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/multiquestions.ts](https://github.com/democli/mynewcli/blob/v0.0.0/src/commands/multiquestions.ts)_
+
 ## `mynewcli test [SECONDARG]`
 
 ```
@@ -107,20 +119,4 @@ USAGE
 ```
 
 _See code: [src/commands/test.ts](https://github.com/democli/mynewcli/blob/v0.0.0/src/commands/test.ts)_
-
-## `mynewcli testcommand [FILE]`
-
-describe the command here
-
-```
-USAGE
-  $ mynewcli testcommand [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-```
-
-_See code: [src/commands/testcommand.ts](https://github.com/democli/mynewcli/blob/v0.0.0/src/commands/testcommand.ts)_
 <!-- commandsstop -->
