@@ -30,12 +30,29 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`mynewcli check [FILE]`](#mynewcli-check-file)
 * [`mynewcli child`](#mynewcli-child)
 * [`mynewcli goodbye`](#mynewcli-goodbye)
 * [`mynewcli hello [FILE]`](#mynewcli-hello-file)
 * [`mynewcli help [COMMAND]`](#mynewcli-help-command)
 * [`mynewcli multiquestions [FILE]`](#mynewcli-multiquestions-file)
 * [`mynewcli test [SECONDARG]`](#mynewcli-test-secondarg)
+
+## `mynewcli check [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ mynewcli check [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/check.ts](https://github.com/democli/mynewcli/blob/v0.0.0/src/commands/check.ts)_
 
 ## `mynewcli child`
 
@@ -44,7 +61,8 @@ USAGE
   $ mynewcli child
 
 OPTIONS
-  --stage=typescript|typescript|typescript
+  --stage=
+  --stage2=
 ```
 
 _See code: [src/commands/child.ts](https://github.com/democli/mynewcli/blob/v0.0.0/src/commands/child.ts)_

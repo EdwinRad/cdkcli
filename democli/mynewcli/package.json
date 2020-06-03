@@ -7,11 +7,14 @@
   },
   "bugs": "https://github.com/democli/mynewcli/issues",
   "dependencies": {
+    "@aws-cdk/aws-iam": "^1.42.1",
+    "@aws-cdk/aws-lambda": "^1.42.1",
+    "@aws-cdk/aws-s3": "^1.42.1",
     "@oclif/command": "^1.6.1",
     "@oclif/config": "^1.15.1",
     "@oclif/plugin-help": "^3.0.1",
     "@types/inquirer": "^6.5.0",
-    "aws-cdk": "^1.42.0",
+    "aws-cdk": "^1.42.1",
     "inquirer": "^7.1.0",
     "tslib": "^1.13.0"
   },
