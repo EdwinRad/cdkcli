@@ -30,26 +30,22 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`mynewcli check [FILE]`](#mynewcli-check-file)
+* [`mynewcli check`](#mynewcli-check)
 * [`mynewcli child`](#mynewcli-child)
 * [`mynewcli goodbye`](#mynewcli-goodbye)
 * [`mynewcli hello [FILE]`](#mynewcli-hello-file)
 * [`mynewcli help [COMMAND]`](#mynewcli-help-command)
+* [`mynewcli init [FILE]`](#mynewcli-init-file)
 * [`mynewcli multiquestions [FILE]`](#mynewcli-multiquestions-file)
 * [`mynewcli test [SECONDARG]`](#mynewcli-test-secondarg)
 
-## `mynewcli check [FILE]`
+## `mynewcli check`
 
 describe the command here
 
 ```
 USAGE
-  $ mynewcli check [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  $ mynewcli check
 ```
 
 _See code: [src/commands/check.ts](https://github.com/democli/mynewcli/blob/v0.0.0/src/commands/check.ts)_
@@ -112,6 +108,22 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.0.1/src/commands/help.ts)_
+
+## `mynewcli init [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ mynewcli init [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/init.ts](https://github.com/democli/mynewcli/blob/v0.0.0/src/commands/init.ts)_
 
 ## `mynewcli multiquestions [FILE]`
 
