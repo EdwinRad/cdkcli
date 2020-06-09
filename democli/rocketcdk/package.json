@@ -1,15 +1,15 @@
 {
-  "name": "mynewcli",
+  "name": "rocketcdk",
   "version": "0.0.0",
-  "author": "Edwin",
+  "author": "Edwin @EdwinRad",
   "bin": {
-    "mynewcli": "./bin/run"
+    "rocketcdk": "./bin/run"
   },
-  "bugs": "https://github.com/democli/mynewcli/issues",
+  "bugs": "https://github.com/EdwinRad/rocketcdk/issues",
   "dependencies": {
     "@oclif/command": "^1.6.1",
     "@oclif/config": "^1.15.1",
-    "@oclif/plugin-help": "^3.0.1",
+    "@oclif/plugin-help": "^3.1.0",
     "@types/inquirer": "^6.5.0",
     "fuzzy": "^0.1.3",
     "inquirer": "^7.1.0",
@@ -21,7 +21,7 @@
     "@oclif/test": "^1.2.6",
     "@types/chai": "^4.2.11",
     "@types/mocha": "^5.2.7",
-    "@types/node": "^10.17.24",
+    "@types/node": "^10.17.25",
     "chai": "^4.2.0",
     "eslint": "^5.16.0",
     "eslint-config-oclif": "^3.1.0",
@@ -30,7 +30,7 @@
     "mocha": "^5.2.0",
     "nyc": "^14.1.1",
     "ts-node": "^8.10.2",
-    "typescript": "^3.9.3"
+    "typescript": "^3.9.5"
   },
   "engines": {
     "node": ">=8.0.0"
@@ -41,7 +41,7 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/democli/mynewcli",
+  "homepage": "https://github.com/EdwinRad/rocketcdk",
   "keywords": [
     "oclif"
   ],
@@ -49,12 +49,12 @@
   "main": "lib/index.js",
   "oclif": {
     "commands": "./lib/commands",
-    "bin": "mynewcli",
+    "bin": "rocketcdk",
     "plugins": [
       "@oclif/plugin-help"
     ]
   },
-  "repository": "democli/mynewcli",
+  "repository": "EdwinRad/rocketcdk",
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",

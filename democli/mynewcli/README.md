@@ -31,11 +31,13 @@ USAGE
 # Commands
 <!-- commands -->
 * [`mynewcli check`](#mynewcli-check)
+* [`mynewcli checkbox [FILE]`](#mynewcli-checkbox-file)
 * [`mynewcli child`](#mynewcli-child)
 * [`mynewcli goodbye`](#mynewcli-goodbye)
 * [`mynewcli hello [FILE]`](#mynewcli-hello-file)
 * [`mynewcli help [COMMAND]`](#mynewcli-help-command)
-* [`mynewcli init [FILE]`](#mynewcli-init-file)
+* [`mynewcli init`](#mynewcli-init)
+* [`mynewcli multi [FILE]`](#mynewcli-multi-file)
 * [`mynewcli multiquestions [FILE]`](#mynewcli-multiquestions-file)
 * [`mynewcli test [SECONDARG]`](#mynewcli-test-secondarg)
 
@@ -49,6 +51,22 @@ USAGE
 ```
 
 _See code: [src/commands/check.ts](https://github.com/democli/mynewcli/blob/v0.0.0/src/commands/check.ts)_
+
+## `mynewcli checkbox [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ mynewcli checkbox [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/checkbox.ts](https://github.com/democli/mynewcli/blob/v0.0.0/src/commands/checkbox.ts)_
 
 ## `mynewcli child`
 
@@ -109,13 +127,28 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.0.1/src/commands/help.ts)_
 
-## `mynewcli init [FILE]`
+## `mynewcli init`
 
 describe the command here
 
 ```
 USAGE
-  $ mynewcli init [FILE]
+  $ mynewcli init
+
+OPTIONS
+  --stage=
+  --stage2=
+```
+
+_See code: [src/commands/init.ts](https://github.com/democli/mynewcli/blob/v0.0.0/src/commands/init.ts)_
+
+## `mynewcli multi [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ mynewcli multi [FILE]
 
 OPTIONS
   -f, --force
@@ -123,7 +156,7 @@ OPTIONS
   -n, --name=name  name to print
 ```
 
-_See code: [src/commands/init.ts](https://github.com/democli/mynewcli/blob/v0.0.0/src/commands/init.ts)_
+_See code: [src/commands/multi.ts](https://github.com/democli/mynewcli/blob/v0.0.0/src/commands/multi.ts)_
 
 ## `mynewcli multiquestions [FILE]`
 
