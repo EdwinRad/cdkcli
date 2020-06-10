@@ -7,6 +7,7 @@
   },
   "bugs": "https://github.com/democli/mynewcli/issues",
   "dependencies": {
+    "@aws-cdk/aws-dynamodb": "^1.45.0",
     "@oclif/command": "^1.6.1",
     "@oclif/config": "^1.15.1",
     "@oclif/plugin-help": "^3.0.1",
