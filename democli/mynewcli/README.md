@@ -39,8 +39,9 @@ USAGE
 * [`mynewcli init`](#mynewcli-init)
 * [`mynewcli multi [FILE]`](#mynewcli-multi-file)
 * [`mynewcli multiquestions [FILE]`](#mynewcli-multiquestions-file)
+* [`mynewcli subs [FILE]`](#mynewcli-subs-file)
 * [`mynewcli test [SECONDARG]`](#mynewcli-test-secondarg)
-* [`mynewcli write [FILE]`](#mynewcli-write-file)
+* [`mynewcli write`](#mynewcli-write)
 
 ## `mynewcli check`
 
@@ -175,6 +176,22 @@ OPTIONS
 
 _See code: [src/commands/multiquestions.ts](https://github.com/democli/mynewcli/blob/v0.0.0/src/commands/multiquestions.ts)_
 
+## `mynewcli subs [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ mynewcli subs [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/subs.ts](https://github.com/democli/mynewcli/blob/v0.0.0/src/commands/subs.ts)_
+
 ## `mynewcli test [SECONDARG]`
 
 ```
@@ -184,18 +201,13 @@ USAGE
 
 _See code: [src/commands/test.ts](https://github.com/democli/mynewcli/blob/v0.0.0/src/commands/test.ts)_
 
-## `mynewcli write [FILE]`
+## `mynewcli write`
 
 describe the command here
 
 ```
 USAGE
-  $ mynewcli write [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  $ mynewcli write
 ```
 
 _See code: [src/commands/write.ts](https://github.com/democli/mynewcli/blob/v0.0.0/src/commands/write.ts)_

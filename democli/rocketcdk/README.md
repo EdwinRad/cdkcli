@@ -1,8 +1,6 @@
 rocketcdk
 =========
 
-
-
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/rocketcdk.svg)](https://npmjs.org/package/rocketcdk)
 [![Downloads/week](https://img.shields.io/npm/dw/rocketcdk.svg)](https://npmjs.org/package/rocketcdk)
@@ -21,7 +19,7 @@ running command...
 $ rocketcdk (-v|--version|version)
 rocketcdk/0.0.0 darwin-x64 node-v13.10.1
 $ rocketcdk --help [COMMAND]
-USAGE
+USAGE test
   $ rocketcdk COMMAND
 ...
 ```
@@ -31,32 +29,12 @@ USAGE
 * [`rocketcdk help [COMMAND]`](#rocketcdk-help-command)
 * [`rocketcdk init [FILE]`](#rocketcdk-init-file)
 
-## `rocketcdk hello [FILE]`
-
-describe the command here
-
-```
-USAGE
-  $ rocketcdk hello [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-
-EXAMPLE
-  $ rocketcdk hello
-  hello world from ./src/hello.ts!
-```
-
-_See code: [src/commands/hello.ts](https://github.com/EdwinRad/rocketcdk/blob/v0.0.0/src/commands/hello.ts)_
-
 ## `rocketcdk help [COMMAND]`
 
 display help for rocketcdk
 
 ```
-USAGE
+USAGE test
   $ rocketcdk help [COMMAND]
 
 ARGUMENTS
@@ -73,7 +51,7 @@ _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.1.0
 describe the command here
 
 ```
-USAGE
+USAGE test
   $ rocketcdk init [FILE]
 
 OPTIONS
