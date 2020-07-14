@@ -78,12 +78,10 @@ export default class Init extends Command {
         cli.action.start('Initializing your CDK project in ' + answers.language)
         exec('cdk init -l ' + answers.language, function (error, stdout, stderr) {
           if (error) {
-            console.log(error.stack);
-            console.log('Error code: ' + error.code);
-            console.log('Signal received: ' + error.signal);
+            throw new Error(error.message);
           }
           console.log(stdout);
-          console.log(stderr);
+          //console.log(stderr);
           cli.action.stop()
           cli.action.start('Installing aws-cdk packages')
           exec('npm install aws-cdk' + answers.version + ' @aws-cdk/core' + answers.version + ' @aws-cdk/assert' + answers.version, function (error, stdout, stderr) {
@@ -96,18 +94,15 @@ export default class Init extends Command {
             console.log(stderr);
             exec('npm install ' + packages2, function (error, stdout, stderr) {
               if (error) {
-                console.log(error.stack);
-                console.log('Error code: ' + error.code);
-                console.log('Signal received: ' + error.signal);
+                throw new Error(error.message);
+
               }
-              // console.log(stdout);
-              // console.log(stderr);
               cli.action.stop('Installed these packages:' + stdout)
             }
             )
             var folder = path.basename(path.resolve(process.cwd()))
             prepend('./lib/' + folder + '-stack.ts', importpack2, function (err: any) {
-              if (err) return console.log(err);
+              if (err) throw new Error(err.message);;
             });
           });
         })

@@ -33,14 +33,17 @@ USAGE
 * [`mynewcli check`](#mynewcli-check)
 * [`mynewcli checkbox [FILE]`](#mynewcli-checkbox-file)
 * [`mynewcli child`](#mynewcli-child)
+* [`mynewcli error [FILE]`](#mynewcli-error-file)
 * [`mynewcli goodbye`](#mynewcli-goodbye)
 * [`mynewcli hello [FILE]`](#mynewcli-hello-file)
 * [`mynewcli help [COMMAND]`](#mynewcli-help-command)
 * [`mynewcli init`](#mynewcli-init)
 * [`mynewcli multi [FILE]`](#mynewcli-multi-file)
 * [`mynewcli multiquestions [FILE]`](#mynewcli-multiquestions-file)
-* [`mynewcli subs [FILE]`](#mynewcli-subs-file)
+* [`mynewcli python [FILE]`](#mynewcli-python-file)
+* [`mynewcli subs`](#mynewcli-subs)
 * [`mynewcli test [SECONDARG]`](#mynewcli-test-secondarg)
+* [`mynewcli update`](#mynewcli-update)
 * [`mynewcli write`](#mynewcli-write)
 
 ## `mynewcli check`
@@ -82,6 +85,22 @@ OPTIONS
 ```
 
 _See code: [src/commands/child.ts](https://github.com/democli/mynewcli/blob/v0.0.0/src/commands/child.ts)_
+
+## `mynewcli error [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ mynewcli error [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/error.ts](https://github.com/democli/mynewcli/blob/v0.0.0/src/commands/error.ts)_
 
 ## `mynewcli goodbye`
 
@@ -127,19 +146,15 @@ OPTIONS
   --all  see all commands in CLI
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.0.1/src/commands/help.ts)_
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.1.0/src/commands/help.ts)_
 
 ## `mynewcli init`
 
-describe the command here
+Initializes your CDK-app, installs CDK-packages and imports them into your Stack.ts file.
 
 ```
 USAGE
   $ mynewcli init
-
-OPTIONS
-  --stage=
-  --stage2=
 ```
 
 _See code: [src/commands/init.ts](https://github.com/democli/mynewcli/blob/v0.0.0/src/commands/init.ts)_
@@ -176,18 +191,29 @@ OPTIONS
 
 _See code: [src/commands/multiquestions.ts](https://github.com/democli/mynewcli/blob/v0.0.0/src/commands/multiquestions.ts)_
 
-## `mynewcli subs [FILE]`
+## `mynewcli python [FILE]`
 
 describe the command here
 
 ```
 USAGE
-  $ mynewcli subs [FILE]
+  $ mynewcli python [FILE]
 
 OPTIONS
   -f, --force
   -h, --help       show CLI help
   -n, --name=name  name to print
+```
+
+_See code: [src/commands/python.ts](https://github.com/democli/mynewcli/blob/v0.0.0/src/commands/python.ts)_
+
+## `mynewcli subs`
+
+describe the command here
+
+```
+USAGE
+  $ mynewcli subs
 ```
 
 _See code: [src/commands/subs.ts](https://github.com/democli/mynewcli/blob/v0.0.0/src/commands/subs.ts)_
@@ -200,6 +226,17 @@ USAGE
 ```
 
 _See code: [src/commands/test.ts](https://github.com/democli/mynewcli/blob/v0.0.0/src/commands/test.ts)_
+
+## `mynewcli update`
+
+Update your AWS-CDK version and your CDK-packages versions.
+
+```
+USAGE
+  $ mynewcli update
+```
+
+_See code: [src/commands/update.ts](https://github.com/democli/mynewcli/blob/v0.0.0/src/commands/update.ts)_
 
 ## `mynewcli write`
 
