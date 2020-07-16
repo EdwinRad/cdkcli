@@ -34,13 +34,14 @@ USAGE
 * [`mynewcli checkbox [FILE]`](#mynewcli-checkbox-file)
 * [`mynewcli child`](#mynewcli-child)
 * [`mynewcli error [FILE]`](#mynewcli-error-file)
+* [`mynewcli flags [FILE]`](#mynewcli-flags-file)
 * [`mynewcli goodbye`](#mynewcli-goodbye)
 * [`mynewcli hello [FILE]`](#mynewcli-hello-file)
 * [`mynewcli help [COMMAND]`](#mynewcli-help-command)
 * [`mynewcli init`](#mynewcli-init)
 * [`mynewcli multi [FILE]`](#mynewcli-multi-file)
 * [`mynewcli multiquestions [FILE]`](#mynewcli-multiquestions-file)
-* [`mynewcli python [FILE]`](#mynewcli-python-file)
+* [`mynewcli python`](#mynewcli-python)
 * [`mynewcli subs`](#mynewcli-subs)
 * [`mynewcli test [SECONDARG]`](#mynewcli-test-secondarg)
 * [`mynewcli update`](#mynewcli-update)
@@ -101,6 +102,22 @@ OPTIONS
 ```
 
 _See code: [src/commands/error.ts](https://github.com/democli/mynewcli/blob/v0.0.0/src/commands/error.ts)_
+
+## `mynewcli flags [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ mynewcli flags [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/flags.ts](https://github.com/democli/mynewcli/blob/v0.0.0/src/commands/flags.ts)_
 
 ## `mynewcli goodbye`
 
@@ -191,18 +208,13 @@ OPTIONS
 
 _See code: [src/commands/multiquestions.ts](https://github.com/democli/mynewcli/blob/v0.0.0/src/commands/multiquestions.ts)_
 
-## `mynewcli python [FILE]`
+## `mynewcli python`
 
 describe the command here
 
 ```
 USAGE
-  $ mynewcli python [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  $ mynewcli python
 ```
 
 _See code: [src/commands/python.ts](https://github.com/democli/mynewcli/blob/v0.0.0/src/commands/python.ts)_
