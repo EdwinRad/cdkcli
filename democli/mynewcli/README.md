@@ -44,6 +44,7 @@ USAGE
 * [`mynewcli python`](#mynewcli-python)
 * [`mynewcli subs`](#mynewcli-subs)
 * [`mynewcli test [SECONDARG]`](#mynewcli-test-secondarg)
+* [`mynewcli up [FILE]`](#mynewcli-up-file)
 * [`mynewcli update`](#mynewcli-update)
 * [`mynewcli write`](#mynewcli-write)
 
@@ -113,8 +114,9 @@ USAGE
 
 OPTIONS
   -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -h, --help             show CLI help
+  -n, --name=name        name to print
+  -v, --version=version  name to print
 ```
 
 _See code: [src/commands/flags.ts](https://github.com/democli/mynewcli/blob/v0.0.0/src/commands/flags.ts)_
@@ -238,6 +240,22 @@ USAGE
 ```
 
 _See code: [src/commands/test.ts](https://github.com/democli/mynewcli/blob/v0.0.0/src/commands/test.ts)_
+
+## `mynewcli up [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ mynewcli up [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/up.ts](https://github.com/democli/mynewcli/blob/v0.0.0/src/commands/up.ts)_
 
 ## `mynewcli update`
 
