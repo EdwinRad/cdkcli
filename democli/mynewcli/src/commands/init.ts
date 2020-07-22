@@ -11,10 +11,10 @@ var prepend = require('prepend');
 var packages = ['s3', 'ec2', 'dynamodb', 'iam', 'lambda', 'accessanalyzer', 'accessanalyzer', 'amazonmq', 'amplify', 'apigateway', 'apigatewayv2', 'appconfig', 'applicationautoscaling', 'appmesh', 'appstream', 'appsync', 'athena', 'autoscaling', 'autoscaling-common', 'autoscaling-hooktargets', 'autoscalingplans', 'backup', 'batch', 'budgets', 'cassandra', 'ce', 'certificatemanager', 'chatbot', 'cloud9', 'cloudformation', 'cloudfront', 'cloudtrail', 'cloudwatch', 'cloudwatch-actions', 'codebuild', 'codecommit', 'codedeploy', 'codeguruprofiler', 'codepipeline', 'codepipeline-actions', 'codestar', 'codestarconnections', 'codestarnotifications', 'cognito', 'config', 'datapipeline', 'dax', 'detective', 'directoryservice', 'dlm', 'dms', 'docdb', 'dynamodb-global', 'ecr', 'ecr-assets', 'ecs', 'ecs-patterns', 'efs', 'eks', 'eks-legacy', 'elasticache', 'elasticbeanstalk', 'elasticloadbalancing', 'elasticloadbalancingv2', 'elasticloadbalancingv2-actions', 'elasticloadbalancingv2-targets', 'elasticsearch', 'emr', 'events', 'events-targets', 'eventschemas', 'fms', 'fsx', 'gamelift', 'globalaccelerator', 'glue', 'greengrass', 'guardduty', 'imagebuilder', 'inspector', 'iot', 'iot1click', 'iotanalytics', 'iotevents', 'iotthingsgraph', 'kinesis', 'kinesisanalytics', 'kinesisfirehose', 'kms', 'lakeformation', 'lambda-destinations', 'lambda-event-sources', 'lambda-nodejs', 'logs', 'logs-destinations', 'macie', 'managedblockchain', 'mediaconvert', 'medialive', 'mediastore', 'msk', 'neptune', 'networkmanager', 'opsworks', 'opsworkscm', 'pinpoint', 'pinpointemail', 'qldb', 'ram', 'rds', 'redshift', 'resourcegroups', 'robomaker', 'route53', 'route53-patterns', 'route53-targets', 'route53resolver', 's3-assets', 's3-deployment', 's3-notifications', 'sagemaker', 'sam', 'sdb', 'secretsmanager', 'securityhub', 'servicecatalog', 'servicediscovery', 'ses', 'ses-actions', 'sns', 'sns-subscriptions', 'sqs', 'ssm', 'stepfunctions', 'stepfunctions-tasks', 'synthetics', 'transfer', 'waf', 'wafregional', 'wafv2', 'workspaces',];
 
 export default class Init extends Command {
-  static description = 'Initializes your CDK-app, installs CDK-packages and imports them into your Stack.ts file.'
+  static description = 'Initializes your CDK-project, installs CDK-packages and imports them into your Stack.ts file.'
   //Questions
   async run() {
-    console.log('\nWelcome to' + chalk.red.bold(' RocketCDK!') + '\n\nInitialize your CDK-app, install CDK-packages and autoimport them into your Stack.ts file.\n')
+    console.log('\nWelcome to' + chalk.red.bold(' RocketCDK!') + '\n\nInitialize your CDK-project, install CDK-packages and autoimport them into your Stack.ts file.\n')
     inquirer
       .prompt([
         {
@@ -57,13 +57,13 @@ export default class Init extends Command {
         let packages = answers.packages;
         var packages1: any = []
         var importpack: any = []
-        //npm install
+
         function installpackages() {
           for (var i of packages) {
             packages1.push("@aws-cdk/aws-" + i + answers.version);
           }
         }
-        //import statement last part
+
         function importpackages() {
           for (var i of packages) {
             var b = i.replace('-', '').replace('-', '');
@@ -74,35 +74,32 @@ export default class Init extends Command {
         importpackages()
         var packages2 = packages1.join(" ")
         var importpack2 = importpack.join(" ")
-
         cli.action.start('Initializing your CDK project in ' + answers.language)
         exec('cdk init -l ' + answers.language, function (error, stdout, stderr) {
           if (error) {
             throw new Error(error.message);
           }
           console.log(stdout);
-          //console.log(stderr);
+          console.log(stderr);
           cli.action.stop()
-          cli.action.start('Installing aws-cdk packages')
+          cli.action.start('Installing CDK packages')
           exec('npm install aws-cdk' + answers.version + ' @aws-cdk/core' + answers.version + ' @aws-cdk/assert' + answers.version, function (error, stdout, stderr) {
             if (error) {
-              console.log(error.stack);
-              console.log('Error code: ' + error.code);
-              console.log('Signal received: ' + error.signal);
+              throw new Error(error.message);
             }
             console.log(stdout);
             console.log(stderr);
             exec('npm install ' + packages2, function (error, stdout, stderr) {
               if (error) {
                 throw new Error(error.message);
-
               }
+              // console.log(stdout);
+              // console.log(stderr);
               cli.action.stop('Installed these packages:' + stdout)
-            }
-            )
+            })
             var folder = path.basename(path.resolve(process.cwd()))
             prepend('./lib/' + folder + '-stack.ts', importpack2, function (err: any) {
-              if (err) throw new Error(err.message);;
+              if (err) return console.log(err);
             });
           });
         })

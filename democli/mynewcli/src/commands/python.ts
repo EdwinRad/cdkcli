@@ -34,10 +34,15 @@ export default class Python extends Command {
             }
             fs.writeFile('requirements.txt', data, function (err) {
               if (err) throw err;
-              console.log(data);
+              exec('pip install -r requirements.txt -U', function (error, stdout, stderr) {
+                if (error) {
+                  throw new Error(error.message);
+                }
+                console.log(stdout);
+              });
             });
           }); 
-          })
+        })
 
         //              let datareplaced = i.split("1")[0] + answers.version;
 
@@ -58,13 +63,13 @@ export default class Python extends Command {
         //   if (err) return console.error(err);
         //   // Successfully wrote to the file!
         // }); 
-          // exec('pip install -r requirements.txt', function (error, stdout, stderr) {
-          //   if (error) {
-          //     throw new Error(error.message);
-          //   }
-          //   console.log(stdout);
-          // }
-          // );
+        //   exec('pip install -r requirements.txt', function (error, stdout, stderr) {
+        //     if (error) {
+        //       throw new Error(error.message);
+        //     }
+        //     console.log(stdout);
+        //   }
+        //   );
         // });
         
         // var data: any
